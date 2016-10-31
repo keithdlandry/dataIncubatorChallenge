@@ -1,3 +1,10 @@
+#You roll a fair 6 sided die N times, the sum of those N rolls is M.
+#Find the expected value for the product of those N rolls.
+#What is the standard deviation of the result
+
+
+
+
 #traverse all possible rolls by moving one over each time
 #
 
@@ -43,7 +50,7 @@ startArr <-c(N,0,0,0,0,0)
 probs <- c(1/6,1/6,1/6,1/6,1/6,1/6)
 prodArray <- vector()	#store product of roll
 probArray <- vector()   #store the prob of each roll
-numberArray <- vector() #store number of rolls that end up at sum of M
+numberArray <- vector() #store number of rolls that end up with sum = M
 
 findRolls(arr = startArr, pos = 1, N = N, M = M, probs = probs)
 probArray <- probArray/(sum(numberArray)/6^N) #bayes theorm to find actual probabilities
